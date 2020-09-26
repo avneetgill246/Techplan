@@ -1,0 +1,105 @@
+*,::after , ::before{
+    box-sizing: border-box;
+}
+.title{
+    text-align: center;
+}
+
+
+
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+     .topic-div{
+         max-width: 90%;
+     }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+     .topic-div{
+         max-width: 576px;
+     }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+     .topic-div{
+         max-width: 755px;
+     }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+     .topic-div{
+         max-width: 960px;
+     }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+     .topic-div{
+         max-width: 1160px;
+     }
+ } 
+
+.topic-div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.topic{
+    margin-left:1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:1%;
+    width:30%;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    min-height: 114px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+    transition: box-shadow 0.2s ease 0s;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+     .topic{
+         width:100%;
+     }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+     .topic{
+         width:45%;
+     }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+     .topic{
+         width:45%;
+     }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+     .topic{
+         width:31%;
+     }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+     .topic{
+         width:31%;
+     }
+ } 
