@@ -1,6 +1,12 @@
 *,::after , ::before{
     box-sizing: border-box;
 }
+.main-area{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
 .title{
     text-align: center;
 }
@@ -66,8 +72,11 @@
     background-color: #ffffff;
     min-height: 114px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
-    transition: box-shadow 0.2s ease 0s;
+    transition: box-shadow 0.2s ease 0.2s;
+
+
 }
+
 
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
@@ -103,3 +112,21 @@
          width:31%;
      }
  } 
+div{
+    align-self: center;
+}
+.quiz{
+    align-self: center;
+   
+    padding:1%;
+    width: 300px;;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    min-height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+  
+}
+ a{
+    color:black;
+    text-decoration: none;
+}

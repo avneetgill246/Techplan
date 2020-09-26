@@ -8,10 +8,28 @@ app.get('/', (req, res) => {
         'title':'Basic Internet and Protocols',
         'id':'fe1',
         'topics':[
-            'How Internet works',
-            'HTTP',
-            'DNS',
-            'Browsers'
+            {
+                'title':'How Internet works',
+                'descp':'Overview of Internet and IPs'
+        
+            },
+            {
+                'title':'HTTP',
+                'descp':'Http and why Https is better'
+        
+            },
+            {
+                'title':'DNS',
+                'descp':'How Domain is translated to IP address'
+        
+            },
+            {
+                'title':'Browsers',
+                'descp':'Basic understanding of how browser work and browser compatibility'
+        
+            },
+           
+           
    
         ]
 

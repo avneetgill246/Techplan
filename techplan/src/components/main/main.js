@@ -12,18 +12,19 @@ console.log( params)
                 <div className="topics">
     {params.mainData.topics? params.mainData.topics.map(topic=>(
 
-    <div className="topic" key={topic}>
-       <h2>{topic}</h2>
-       <p>This sjsjb asjkcbk asjkbc sn bscjk acjb jkbcs kabc</p>
+    <div className="topic" key={topic.title}>
+       <h3>{topic.title}</h3>
+        <p s>{topic.descp}</p>
     </div>
     
     )):<></>}
     </div>
             </div>
-            
-            <ul>
-           
-            </ul>
+       <div> <a href="#"><div className="quiz">
+              <h3 style={{textAlign:"center"}}>Quiz</h3>
+          </div>
+          </a> 
+          </div> 
         </div>
     )
 
