@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect, useCallback, useMemo } from 'react';
+import Button from '@material-ui/core/Button';
 import './main.css'
 
 
@@ -19,12 +20,38 @@ console.log( params)
     
     )):<></>}
     </div>
-            </div>
-       <div> <a href="#"><div className="quiz">
-              <h3 style={{textAlign:"center"}}>Quiz</h3>
+
+    <div className="quiz"> 
+              <div className='quiz-but'><Button className='button' variant="contained" color="primary">
+        Quiz
+      </Button></div>
+              
+    
+          
+         
+          <div className='pag1'> 
+              
+              <Button className='button' variant="contained" color='secondary'>
+        Previous Topic
+      </Button>  
+      </div>
+      <div className='pag2'>   
+
+                  <Button className='button' variant="contained" color='secondary'>
+        Next Topic
+      </Button>  
+                 
+            
+            
+      
           </div>
-          </a> 
           </div> 
+
+
+            </div>
+      
+          
+          
         </div>
     )
 
