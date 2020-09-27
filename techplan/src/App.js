@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
 
         <Route exact path = "/" component = {Entry}/>
-        <Route path = "/path/:data" component = {Home} />
+        <Route path = "/:pid/:tid" component = {Home} />
 
         </BrowserRouter>
 

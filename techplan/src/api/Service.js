@@ -2,11 +2,11 @@ import http from "./http";
 
 
 
-const getMainData =() => {
+const getMainData =(pid,tid) => {
 
 
  
-return http.get(`/`)
+return http.get(`/?pid=${pid}&tid=${tid}`)
 };
 
 

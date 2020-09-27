@@ -15,7 +15,7 @@ console.log( params)
 
     <div className="topic" key={topic.title}>
        <h3>{topic.title}</h3>
-        <p s>{topic.descp}</p>
+        <p >{topic.descp}</p>
     </div>
     
     )):<></>}
