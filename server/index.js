@@ -34,6 +34,15 @@ const testdata={
        
        
 
+    ],
+    'quiz':[
+        {
+            'ques':'What is it?',
+            'op':[
+                'Dont know','might be','let it','jamesbond007'
+            ],
+            'ans':3
+        }
     ]
 },
 
@@ -41,26 +50,38 @@ const testdata={
 ]
 
 
-    
+    }
 
-    
+const quiz = {
 
+    'fe':[
+        {
+
+        },
+    ]
 }
+
+
 app.get('/', (req, res) => {
 const pid = req.query.pid
 const tid= req.query.tid
-if (testdata.hasOwnProperty(pid)){
-    if (testdata[pid].length <= parseInt(tid) && parseInt(tid) >= 0 ){
-        res.send(testdata[pid][parseInt(tid)-1])
+
+
+    if (testdata.hasOwnProperty(pid)){
+        if (testdata[pid].length <= parseInt(tid) && parseInt(tid) >= 0 ){
+            res.send(testdata[pid][parseInt(tid)-1])
+        }
+        else{
+            res.send('non')
+        }
+        
     }
     else{
         res.send('non')
     }
     
-}
-else{
-    res.send('non')
-}
+    
+
 
 
    

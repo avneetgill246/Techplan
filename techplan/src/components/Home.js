@@ -3,7 +3,7 @@ import './Home.css'
 import Service from '../api/Service'
 import Nav from './navbar/nav'
 import Main from "./main/main";
-
+import Quiz from './quiz/quiz'
 
 
 
@@ -14,10 +14,17 @@ import Main from "./main/main";
 function Home(props) {
 const [mainData,setMainData]= useState({})
 const[err,seterr]=useState()
+const[toqu,settoqu]=useState(true)
+
+const Changewin = ()=>{
+  settoqu(function (prevv) { return !prevv})
+  console.log(toqu)
+}
 
 useEffect(()=>{
   const pid=props.match.params.pid
   const tid=props.match.params.tid
+  
   Service.getMainData(pid,tid).then(res=>{
   console.log(res.data)
   if (res.data==='non' || res.data===""){
@@ -43,10 +50,10 @@ useEffect(()=>{
 <Nav/>
 </div>
 
-  <div className="main">
-  <Main mainData={mainData}/>
+  {toqu?<div className="main">
+  <Main mainData={mainData} change={Changewin}/>
 
-</div>
+</div>:<Quiz mainData={mainData} change={Changewin}/>}
 
 
 </div>}  

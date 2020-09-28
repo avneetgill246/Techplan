@@ -1,0 +1,48 @@
+*,::after , ::before{
+    box-sizing: border-box;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .quiz{
+        max-width: 90%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .quiz{
+        max-width: 576px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .quiz{
+        max-width: 755px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .quiz{
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .quiz{
+        max-width: 1160px;
+    }
+} 
+
+
+.quiz{
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}

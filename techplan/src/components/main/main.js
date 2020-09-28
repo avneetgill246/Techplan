@@ -22,7 +22,7 @@ console.log( params)
     </div>
 
     <div className="quiz"> 
-              <div className='quiz-but'><Button className='button' variant="contained" color="primary">
+              <div className='quiz-but'><Button className='button' variant="contained" color="primary" onClick={params.change}>
         Quiz
       </Button></div>
               
@@ -41,8 +41,7 @@ console.log( params)
         Next Topic
       </Button>  
                  
-            
-            
+          
       
           </div>
           </div> 
