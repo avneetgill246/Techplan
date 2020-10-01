@@ -5,28 +5,29 @@ import './quiz.css'
 export default function Quiz(params) {
     return(
         <div className="quiz">
-            <div>
+            <ol>
                 {params.mainData.quiz.map((opt,index)=>(
-                    <div key={index}>
-                         <div className='ques'>
+                    <li key={index}>
+                
                          <h3>{opt.ques}</h3>
-                     </div>
-                     <div className='options'>
-                        <ol>
+                    
+                       <div>
                             {opt.op.map((option,index1)=>(
-                                <li key={index1}>
-                                    <input />
+                                <div key={index1} >
+                                    <Button className="button1" variant="outlined">
+                                      {option}
+                                    </Button>
                                     
                                    
-                                </li>
+                                </div>
                             ))}
-                        </ol>
-                     </div>
-                     </div>
+                       </div>
+                   
+                     </li>
                 ))}
                
-            </div>
-            <Button className='button' variant="contained" color="primary" onClick={params.change}>
+            </ol>
+            <Button id='bbutton' variant="contained" color="primary" onClick={params.change}>
         Topics
       </Button>
         </div>

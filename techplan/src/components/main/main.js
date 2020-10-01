@@ -29,13 +29,12 @@ console.log( params)
     
           
          
-          <div className='pag1'> 
+          <div className='pag'> 
               
               <Button className='button' variant="contained" color='secondary'>
         Previous Topic
       </Button>  
-      </div>
-      <div className='pag2'>   
+
 
                   <Button className='button' variant="contained" color='secondary'>
         Next Topic

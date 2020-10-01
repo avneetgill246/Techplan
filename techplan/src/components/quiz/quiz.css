@@ -7,6 +7,7 @@
     .quiz{
         max-width: 90%;
     }
+ 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -14,6 +15,7 @@
     .quiz{
         max-width: 576px;
     }
+  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -21,6 +23,7 @@
     .quiz{
         max-width: 755px;
     }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -28,6 +31,7 @@
     .quiz{
         max-width: 960px;
     }
+ 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -35,9 +39,14 @@
     .quiz{
         max-width: 1160px;
     }
+  
 } 
 
-
+.button1{
+    max-width: 300px;
+    width:300px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+}
 .quiz{
     margin-left: auto;
     margin-right: auto;
@@ -45,4 +54,8 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    
+}
+.button1 span {
+    justify-content: normal;
 }
