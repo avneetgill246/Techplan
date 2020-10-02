@@ -43,8 +43,8 @@
 } 
 
 .button1{
-    max-width: 300px;
-    width:300px;
+   width:100%;
+    max-width: 350px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
 }
 .quiz{

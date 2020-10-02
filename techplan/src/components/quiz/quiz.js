@@ -3,28 +3,54 @@ import Button from '@material-ui/core/Button';
 import './quiz.css'
 
 export default function Quiz(params) {
+
+    
+    var [buttonGraph,setbuttonGraph]= useState([])
+    useEffect(()=>{
+     params.mainData.quiz.forEach(element => {
+        setbuttonGraph((prev)=>{
+        return [...prev,[0,0,0,0]]
+     });
+    
+    })},[])
+
+    const colorchange = (ques,option)=>{
+      
+        setbuttonGraph((prev)=>{
+            prev[ques][option]=1
+            return prev
+        })
+     
+       
+    }
+   
     return(
         <div className="quiz">
             <ol>
-                {params.mainData.quiz.map((opt,index)=>(
+                {buttonGraph.length>0?params.mainData.quiz.map((opt,index)=>(
                     <li key={index}>
                 
                          <h3>{opt.ques}</h3>
                     
-                       <div>
+                       <ol style={{paddingLeft:'0px'}} type="a">  
                             {opt.op.map((option,index1)=>(
-                                <div key={index1} >
-                                    <Button className="button1" variant="outlined">
-                                      {option}
+                                <li key={index1}  >
+                                    <Button  variant='text' className="button1" variant="contained"
+                                    color={buttonGraph[index][index1]==1?'secondary':buttonGraph[index][index1]==0?'default':'primary'}
+                                    onClick={()=>{colorchange(index,index1)}}
+                                    
+                                    >
+                                     {option}
+                                     {buttonGraph[index][index1]}
                                     </Button>
                                     
                                    
-                                </div>
+                                </li>
                             ))}
-                       </div>
+                       </ol>
                    
                      </li>
-                ))}
+                )):<></>}
                
             </ol>
             <Button id='bbutton' variant="contained" color="primary" onClick={params.change}>
