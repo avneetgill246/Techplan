@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useCallback, useMemo } from 're
 import Button from '@material-ui/core/Button';
 import { red, purple } from '@material-ui/core/colors'
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-
+import Store from 'store'
 import './quiz.css'
 
 
@@ -85,6 +85,13 @@ const reset = ()=>{
      })
      setbuttonGraph(Array(...ab))
      setScore({score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
+     const lo=Store.get(`${params.mainData.id}-${params.mainData.num}`,{score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
+     if(lo.score > score){
+         Store.set(`${params.mainData.id}-${params.mainData.num}`,{score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
+     }
+     if((score/totalScore)*10>=0.5){
+         Store.set(`${params.mainData.id}`,{'level':params.mainData.num+1})
+     }
      setloading(false)
      setSubmitted(true)
     }
@@ -108,7 +115,7 @@ const reset = ()=>{
                                     
                                     >
                                      {option}
-                                     {buttonGraph[index][index1]}
+                                     
                                     </Button>
                                     
                                    

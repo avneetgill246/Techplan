@@ -24,7 +24,9 @@ console.log( params)
     <div className="quiz"> 
               <div className='quiz-but'><Button className='button' variant="contained" color="primary" onClick={params.change}>
         Quiz
-      </Button></div>
+      </Button>
+      {params.level?<div>Done</div>:<></>}
+      </div>
               
     
           
