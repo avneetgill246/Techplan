@@ -2,10 +2,11 @@
 .wrapper {
 	
     display: grid;
-    background-color: #ffffff;
+  
 	grid-template-rows: 0.25fr auto ; /* 170px 210px 61px 61px */
 	grid-template-columns:  auto; /* 124px 376px 42px*/
-	
+	height: 100%;
+	background-color: #edf2f2;
 	
 }
 

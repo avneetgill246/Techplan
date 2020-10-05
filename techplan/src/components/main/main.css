@@ -4,10 +4,13 @@
 .main-area{
     display: flex;
     flex-direction: column;
+   
+    
 
 }
 .title{
     text-align: center;
+   
 }
 
 
@@ -68,7 +71,7 @@
     padding:1%;
     width:30%;
     border-radius: 1rem;
-    background-color: #ffffff;
+    background-color:#edf5f5;
     min-height: 114px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
     transition: box-shadow 0.2s ease 0.2s;
@@ -137,7 +140,7 @@
     justify-content: center;
 }
 .pag{
-    margin-top: 6vh;
+    margin-top: 4vh;
     grid-row:2/3;
     grid-column: 1/2;
     display: flex;

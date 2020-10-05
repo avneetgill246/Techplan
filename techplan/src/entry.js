@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect, useCallback, useMemo } from 'react';
 import { Link } from '@reach/router';
+import Nav from './components/navbar/nav'
 import Store from 'store'
+import './entry.css'
 export default function Navbar(params) {
     const[level,setlevel]=useState()
     useEffect(()=>{
@@ -9,10 +11,15 @@ export default function Navbar(params) {
       },[])
     
     return(
-        <div className="main-area">
-            Entry
-        <Link to={`/fe/${level}`}>Abc</Link>
-        </div>
+        <div className="App">
+  
+
+
+<Nav/>
+<div className='main-1'>
+abc
+</div>
+  </div>
     )
 
-}
+    }

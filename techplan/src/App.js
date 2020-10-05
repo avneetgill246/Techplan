@@ -8,7 +8,7 @@ function App() {
   
   return (
 
-    <Router>
+    <Router style={{height:'100%'}}  >
     <Entry exact path="/" />
     <Home path = "/:pid/:tid" key={Math.random()} />
 

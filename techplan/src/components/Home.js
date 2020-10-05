@@ -22,7 +22,7 @@ const [right,setright]=useState(0)
 const[length,setlength]=useState(1)
 const[toqu,settoqu]=useState(true)
 const[level,setlevel]=useState()
-const [, forceUpdate] = useState();
+
 const Changewin = ()=>{
   settoqu(function (prevv) { return !prevv})
   console.log(toqu)
