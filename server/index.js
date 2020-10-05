@@ -99,6 +99,52 @@ const testdata={
         }
     ]
 },
+{
+    'title':'Basic Internet and Protocols',
+    'id':'fe',
+    'num':3,
+    'topics':[
+        {
+            'title':'How Internet works',
+            'descp':'Overview of Internet and IPs'
+    
+        },
+        {
+            'title':'HTTP',
+            'descp':'Http and why Https is better'
+    
+        },
+        {
+            'title':'DNS',
+            'descp':'How Domain is translated to IP address'
+    
+        },
+        {
+            'title':'Browsers',
+            'descp':'Basic understanding of how browser work and browser compatibility'
+    
+        },
+       
+       
+
+    ],
+    'quiz':[
+        {
+            'ques':'What is it?',
+            'op':[
+                'Dont know','might be','let it','jamesbond007'
+            ],
+            'ans':3
+        },
+        {
+            'ques':'What is it?',
+            'op':[
+                'Dont know','might be','let it sjn sajkbc hjsabb sjh abhuash','jamesbond007'
+            ],
+            'ans':3
+        }
+    ]
+},
 
 
 

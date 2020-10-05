@@ -16,7 +16,13 @@ useEffect(()=>{
 
 },[])
 
+
 const navigate = useNavigate();
+
+const routing = (id,num)=>{
+  navigate(`/${id}/${num}`)
+  window.location.reload();
+}
 
     return(
         <div className="main-area">
@@ -45,15 +51,13 @@ const navigate = useNavigate();
          
           <div className='pag'> 
           {console.log(params.direct.lef)}
-            {params.direct.left? <Link to={`/${params.mainData.id}/${params.direct.left}`}><Button className='button' variant="contained" color='secondary'>
+            {params.direct.left? <Button className='button' variant="contained" color='secondary' onClick={()=>routing(params.mainData.id,params.direct.left)}>
         Previous Topic
-      </Button> </Link> :<Button className='button' variant="contained" color='secondary' disabled>
+      </Button>  :<Button className='button' variant="contained" color='secondary' disabled>
         Previous Topic
       </Button>  } 
 
-      {params.direct.right? <Button className='button' variant="contained" color='secondary' onClick={() =>{ navigate(`/${params.mainData.id}/${params.direct.right}`, { replace: true })
-      console.log(this)}
-    }>
+      {params.direct.right? <Button className='button' variant="contained" color='secondary' onClick={()=>routing(params.mainData.id,params.direct.right)}>
         Next Topic
       </Button>  :<Button className='button' variant="contained" color='secondary' disabled>
         Next Topic

@@ -22,6 +22,7 @@ const [right,setright]=useState(0)
 const[length,setlength]=useState(1)
 const[toqu,settoqu]=useState(true)
 const[level,setlevel]=useState()
+const [, forceUpdate] = useState();
 const Changewin = ()=>{
   settoqu(function (prevv) { return !prevv})
   console.log(toqu)
@@ -37,7 +38,7 @@ console.log(props)
   const level=Store.get(pid,{'level':1})['level']
   if(Number(tid) > Number(level)){
     navigate(`/${pid}/${level}`)
-    
+    window.location.reload();
   }
     if(Number(tid) < Number(level)){
       setlevel(true)
@@ -51,7 +52,7 @@ console.log(props)
         setlength(res.data.total)
         console.log('ab')
         if(res.data.main.num==1){
-          if(res.data.total>1)
+          if(res.data.main.num !=res.data.total)
          
           setright(2)
       }
