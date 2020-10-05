@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Link } from "@reach/router"
 
 import Home from './components/Home'
 import Entry from "./entry";
 
 function App() {
-
+  
   return (
 
-    <BrowserRouter>
+    <Router>
+    <Entry exact path="/" />
+    <Home path = "/:pid/:tid" key={Math.random()} />
 
-        <Route exact path = "/" component = {Entry}/>
-        <Route path = "/:pid/:tid" component = {Home} />
 
-        </BrowserRouter>
+
+        </Router>
 
 
    

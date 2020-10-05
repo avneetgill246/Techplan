@@ -125,7 +125,7 @@ console.log(testdata[pid][parseInt(tid)-1])
 
     if (testdata.hasOwnProperty(pid)){
         if (testdata[pid].length >= parseInt(tid) && parseInt(tid) >= 0 ){
-            res.send(testdata[pid][parseInt(tid)-1])
+            res.send({'main':testdata[pid][parseInt(tid)-1],'total':testdata[pid].length})
         }
         else{
             res.send('non')
