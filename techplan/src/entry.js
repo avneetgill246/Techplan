@@ -17,7 +17,7 @@ export default function Navbar(params) {
 
 <Nav/>
 <div className='main-1'>
-abc
+
 </div>
   </div>
     )

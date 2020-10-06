@@ -2,9 +2,41 @@ import React, { useState, useContext, useEffect, useCallback, useMemo } from 're
 import Button from '@material-ui/core/Button';
 import { red, purple } from '@material-ui/core/colors'
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Store from 'store'
 import './quiz.css'
-
+import PropTypes from 'prop-types';
+import CircularProgress from '@material-ui/core/CircularProgress';
+function CircularProgressWithLabel(props) {
+    return (
+      <Box position="relative" display="inline-flex" >
+        <CircularProgress variant="static" {...props} />
+        <Box
+          top={0}
+          left={0}
+          bottom={0}
+          right={0}
+          position="absolute"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
+            props.value,
+          )}%`}</Typography>
+        </Box>
+      </Box>
+    );
+  }
+  
+  CircularProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate and static variants.
+     * Value between 0 and 100.
+     */
+    value: PropTypes.number.isRequired,
+  };
 
 const theme = createMuiTheme({
     palette: {
@@ -16,7 +48,7 @@ wrong:{ backgroundColor: '#c62828', color: 'white'}
     },
   });
 export default function Quiz(params) {
-
+    const [progress, setProgress] = React.useState(0);
     var[loading,setloading]=useState(false)
     var[submitted,setSubmitted]=useState(false)
     var [buttonGraph,setbuttonGraph]= useState([])
@@ -86,7 +118,8 @@ const reset = ()=>{
      setbuttonGraph(Array(...ab))
      setScore({score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
      const lo=Store.get(`${params.mainData.id}-${params.mainData.num}`,{score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
-     if(lo.score > score){
+     
+     if(score > lo.score){
          Store.set(`${params.mainData.id}-${params.mainData.num}`,{score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
      }
      if((score/totalScore)*10>=0.5){
@@ -141,6 +174,7 @@ const reset = ()=>{
       {scorecard['score']>=0?<div>
                             <h2>{scorecard['pass']?'Pass':'Fail'}</h2>
                             <h3>Score - {scorecard['score']}/{scorecard['total']}</h3>
+                            <CircularProgressWithLabel variant="static" value={(scorecard['score']/scorecard['total'])*100} />
       </div>:<></>}
    
             <Button id='bbutton' variant="contained" color="primary" onClick={params.change}>

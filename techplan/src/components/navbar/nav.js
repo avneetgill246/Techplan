@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
+    
     marginRight: theme.spacing(2),
   },
   appbar:{
@@ -25,13 +26,16 @@ export default function DenseAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar} >
         <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge='start' className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit">
             Photos
           </Typography>
+       
+          
         </Toolbar>
+       
       </AppBar>
     </div>
   );
