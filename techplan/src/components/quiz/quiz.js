@@ -123,7 +123,7 @@ const reset = ()=>{
          Store.set(`${params.mainData.id}-${params.mainData.num}`,{score:score,pass:(score/totalScore)*10>=0.5,total:totalScore})
      }
      if((score/totalScore)*10>=0.5){
-         Store.set(`${params.mainData.id}`,{'level':params.mainData.num+1})
+         Store.set(`${params.mainData.id}`,{'level':params.mainData.num+1,'total':params.leng})
      }
      setloading(false)
      setSubmitted(true)

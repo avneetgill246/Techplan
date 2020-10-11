@@ -1,8 +1,10 @@
 const express = require('express')
 const cors =require('cors')
 const app = express()
+const path = require('path');
 const port = 8000
 app.use(cors())
+
 const testdata={
 
     'fe':
@@ -184,16 +186,12 @@ console.log(testdata[pid][parseInt(tid)-1])
     
     
 
-
-
-   
-  
 })
 
 app.get('/quiz',(req,res)=>{
     
 })
-
+    
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
